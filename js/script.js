@@ -24,6 +24,7 @@ const movieDB = {
     ]
 };
 
+//5
 movieDB.movies.sort()
 
 //1
@@ -42,26 +43,35 @@ genre.innerHTML = 'Драма'
 let bg = document.querySelector('.promo__bg')
 
 bg.style.backgroundImage = `url(./img/bg.jpg)`
-let promo__interactive_ul = document.querySelector('.promo__interactive-list')
 
 //4
-for (let item of movieDB.movies) {
-    let idx = movieDB.movies.indexOf(item) + 1
+let promo__interactive_ul = document.querySelector('.promo__interactive-list')
 
-    //a
-    let promo__interactive_li = document.createElement('li')
-    let div_delete = document.createElement('div')
+numbers()
 
-    //b
-    promo__interactive_li.classList.add('promo__interactive-item')
-    div_delete.classList.add('delete')
-    promo__interactive_li.innerHTML = idx + ')' + item
+function numbers() {
+    promo__interactive_ul.innerHTML = ''
 
-    //c
-    promo__interactive_ul.append(promo__interactive_li)
-    promo__interactive_li.append(div_delete)
+    for (let item of movieDB.movies) {
+        let idx = movieDB.movies.indexOf(item) + 1
+        console.log(idx, item);
+    
+        //a
+        let promo__interactive_li = document.createElement('li')
+        let div_delete = document.createElement('div')
+    
+        //b
+        promo__interactive_li.classList.add('promo__interactive-item')
+        div_delete.classList.add('delete')
+        promo__interactive_li.innerHTML = idx + ')' + item
+    
+        //c
+        promo__interactive_ul.append(promo__interactive_li)
+        promo__interactive_li.append(div_delete)
 
-    div_delete.onclick = () => {
-        promo__interactive_li.remove()
+        div_delete.onclick = () => {
+            movieDB.movies.splice(idx - 1, 1)
+            numbers()
+        }
     }
 }
