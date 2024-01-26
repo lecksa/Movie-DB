@@ -14,18 +14,8 @@
 
 'use strict';
 
-const movieDB = {
-    movies: [
-        "Логан",
-        "Лига справедливости",
-        "Ла-ла лэнд",
-        "Одержимость",
-        "Скотт Пилигрим против..."
-    ]
-};
-
 //5
-movieDB.movies.sort()
+movies.sort()
 
 //1
 let imgs = document.querySelectorAll('.promo__adv img')
@@ -47,31 +37,40 @@ bg.style.backgroundImage = `url(./img/bg.jpg)`
 //4
 let promo__interactive_ul = document.querySelector('.promo__interactive-list')
 
+let rating = document.querySelector('.IMDb')
+let rating_2 = document.querySelector('.kino')
+
 numbers()
 
 function numbers() {
     promo__interactive_ul.innerHTML = ''
 
-    for (let item of movieDB.movies) {
-        let idx = movieDB.movies.indexOf(item) + 1
+    for (let item of movies) {
+        let idx = movies.indexOf(item) + 1
         console.log(idx, item);
-    
+
         //a
         let promo__interactive_li = document.createElement('li')
         let div_delete = document.createElement('div')
-    
+
         //b
         promo__interactive_li.classList.add('promo__interactive-item')
         div_delete.classList.add('delete')
-        promo__interactive_li.innerHTML = idx + ')' + item
-    
+        promo__interactive_li.innerHTML = idx + ')' + item.Title
+
         //c
         promo__interactive_ul.append(promo__interactive_li)
         promo__interactive_li.append(div_delete)
 
         div_delete.onclick = () => {
-            movieDB.movies.splice(idx - 1, 1)
+            movies.splice(idx - 1, 1)
             numbers()
+        }
+
+        promo__interactive_li.onclick = () => {
+            bg.style.background = `url(${item.Poster}) center center/cover no-repeat`
+            rating.innerHTML = 'IMDb:' + ' ' + `${item.imdbRating}`
+            rating_2.innerHTML = 'Кинопоиск:' + ' ' + `${item.Kinopoisk}`
         }
     }
 }
