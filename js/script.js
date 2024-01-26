@@ -39,6 +39,8 @@ let promo__interactive_ul = document.querySelector('.promo__interactive-list')
 
 let rating = document.querySelector('.IMDb')
 let rating_2 = document.querySelector('.kino')
+let plot = document.querySelector('.promo__descr')
+let title = document.querySelector('.promo__title')
 
 numbers()
 
@@ -71,6 +73,9 @@ function numbers() {
             bg.style.background = `url(${item.Poster}) center center/cover no-repeat`
             rating.innerHTML = 'IMDb:' + ' ' + `${item.imdbRating}`
             rating_2.innerHTML = 'Кинопоиск:' + ' ' + `${item.Kinopoisk}`
+            plot.innerHTML = `${item.Plot}`
+            genre.innerHTML = `${item.Genre}`
+            title.innerHTML = `${item.Title}`
         }
     }
 }
