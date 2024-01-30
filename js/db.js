@@ -1,5 +1,4 @@
-let movies = [
-    {
+const movies = [{
         "ID": "1",
         "Title": "Cтражи Галактики",
         "Year": "2014",
@@ -91,7 +90,7 @@ let movies = [
         "Rated": "PG-13",
         "Released": "04 May 2012",
         "Runtime": "143 min",
-        "Genre": "Научная фантастика",
+        "Genre": "Научная фантастикa",
         "Director": "Joss Whedon",
         "Writer": "Joss Whedon (screenplay), Zak Penn (story), Joss Whedon (story)",
         "Actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth",
@@ -301,7 +300,7 @@ let movies = [
         "Rated": "PG-13",
         "Released": "07 Jul 2017",
         "Runtime": "133 min",
-        "Genre": "Фэнтези ",
+        "Genre": "Фэнтези",
         "Director": "Jon Watts",
         "Writer": "Jonathan Goldstein (screenplay by), John Francis Daley (screenplay by), Jon Watts (screenplay by), Christopher Ford (screenplay by), Chris McKenna (screenplay by), ErikSommers (screenplay by), Jonathan Goldstein (screen story by), John Francis Daley (screen story by), Stan Lee (based on the Marvel comic book by), Steve Ditko (based on the Marvel comic book by), Joe Simon (Captain America created by), Jack Kirby (Captain America created by)",
         "Actors": "Tom Holland, Michael Keaton, Robert Downey Jr., Marisa Tomei",
@@ -385,7 +384,7 @@ let movies = [
         "Rated": "PG-13",
         "Released": "17 Jul 2015",
         "Runtime": "117 min",
-        "Genre": "КОМЕДИЯ",
+        "Genre": "Комедия",
         "Director": "Peyton Reed",
         "Writer": "Edgar Wright (screenplay by), Joe Cornish (screenplay by), Adam McKay (screenplay by), Paul Rudd (screenplay by), Edgar Wright (story by), Joe Cornish (story by), Stan Lee (based on the Marvel comics by), Larry Lieber (based on the Marvel comics by), Jack Kirby (based on the Marvel comics by)",
         "Actors": "Paul Rudd, Michael Douglas, Evangeline Lilly, Corey Stoll",
@@ -464,4 +463,6 @@ let movies = [
         "Response": "True"
     }
 ]
+
+export {movies}
 
