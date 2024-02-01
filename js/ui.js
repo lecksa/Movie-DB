@@ -60,40 +60,40 @@ export function numbers(arr, place) {
     }
 }
 
-// export function reload_genres(arr, place, sc_place) {
-//     place.innerHTML = ''
+export function reload_genres(arr, place, sc_place) {
+    place.innerHTML = ''
 
-//     for (let item of arr) {
-//         let idx = arr.indexOf(item)
+    for (let item of arr) {
+        let idx = arr.indexOf(item)
 
-//         //a
-//         let li = document.createElement('li')
-//         let a = document.createElement('a')
-//         //b
-//         if (idx === 0) a.classList.add('promo__menu-item_active')
+        //a
+        let li = document.createElement('li')
+        let a = document.createElement('a')
+        //b
+        if (idx === 0) a.classList.add('promo__menu-item_active')
 
-//         a.classList.add('promo__menu-item')
-//         a.href = '#'
-//         a.innerHTML = item
-//         //c
+        a.classList.add('promo__menu-item')
+        a.href = '#'
+        a.innerHTML = item
+        //c
 
-//         place.append(li)
-//         li.append(a)
+        place.append(li)
+        li.append(a)
 
-//         li.onclick = () => {
-//             const previousElem = place.querySelector('.promo__menu-item_active')
-//             previousElem.classList.remove('promo__menu-item_active')
+        li.onclick = () => {
+            const previousElem = place.querySelector('.promo__menu-item_active')
+            previousElem.classList.remove('promo__menu-item_active')
 
-//             a.classList.add('promo__menu-item_active')
+            a.classList.add('promo__menu-item_active')
 
-//             if (item === 'Все') {
-//                 numbers(movies, sc_place)
-//                 return
-//             }
+            if (item === 'Все') {
+                numbers(movies, sc_place)
+                return
+            }
 
-//             let filtered = movies.filter(movie => movie.Genre === item)
+            let filtered = movies.filter(movie => movie.Genre === item)
 
-//             numbers(filtered, sc_place)
-//         }
-//     }
-// }
+            numbers(filtered, sc_place)
+        }
+    }
+}
