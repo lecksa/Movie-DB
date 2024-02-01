@@ -1,20 +1,20 @@
 import { movies } from "./db.js"
 
-// function setMovie(item) {
-//     let genre = document.querySelector('.promo__genre')
-//     const rating = document.querySelector('.IMDb')
-//     const rating_2 = document.querySelector('.kino')
-//     const plot = document.querySelector('.promo__descr')
-//     const title = document.querySelector('.promo__title')
-//     const bg = document.querySelector('.promo__bg')
+function setMovie(item) {
+    let genre = document.querySelector('.promo__genre')
+    const rating = document.querySelector('.IMDb')
+    const rating_2 = document.querySelector('.kino')
+    const plot = document.querySelector('.promo__descr')
+    const title = document.querySelector('.promo__title')
+    const bg = document.querySelector('.promo__bg')
 
-//     bg.style.background = `url(${item.Poster}) center center/cover no-repeat`
-//     rating.innerHTML = 'IMDb:' + ' ' + `${item.imdbRating}`
-//     rating_2.innerHTML = 'Кинопоиск:' + ' ' + `${item.Kinopoisk}`
-//     plot.innerHTML = `${item.Plot}`
-//     genre.innerHTML = `${item.Genre}`
-//     title.innerHTML = `${item.Title}`
-// }
+    bg.style.background = `url(${item.Poster}) center center/cover no-repeat`
+    rating.innerHTML = 'IMDb:' + ' ' + `${item.imdbRating}`
+    rating_2.innerHTML = 'Кинопоиск:' + ' ' + `${item.Kinopoisk}`
+    plot.innerHTML = `${item.Plot}`
+    genre.innerHTML = `${item.Genre}`
+    title.innerHTML = `${item.Title}`
+}
 
 export function numbers(arr, place) {
     //1
